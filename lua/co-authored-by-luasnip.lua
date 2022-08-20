@@ -9,8 +9,9 @@ local co_authored_by = format("Co-Authored-By: {}", {
 })
 
 -- TODO: come back and make this the main export
-local function setup(opts)
-  local trigger = opts.trig or "cab"
+local function setup(options)
+  local opts = options or {}
+  local trigger = opts.trigger or "cab"
 
   return luasnip.add_snippets("gitcommit", {
     snippet(
